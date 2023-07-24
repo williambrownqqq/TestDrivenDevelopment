@@ -74,4 +74,17 @@ public class Main {
         double sum = calculateSum(array);
         return sum / array.length;
     }
+
+    public static void main(String[] args) {
+        Main main = new Main();
+        double start = 0.0;
+        double end = 3.0;
+        double step = 0.004;
+        double[] x = main.fillX(start, end, step);
+        double[] y = main.fillY(x);
+        int minIndex = main.findIndexOfMinValue(y);
+        int maxIndex = main.findIndexOfMaxValue(y);
+        double sum = main.calculateSum(y);
+        double arithmeticMean = sum / y.length;
+    }
 }
